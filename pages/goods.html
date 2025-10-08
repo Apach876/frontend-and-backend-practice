@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-<div id="header">Хэдер</div>
-<div id="menu">
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="practices.html">Практики</a></li>
-        <li><a href="goods.html">Товары</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-</div>
-<div id="content">
+<div class="page-container">
+    <div class="header">Хэдер</div>
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link"
+                                    href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link"
+                                    href="news.html">Новости</a></li>
+            <li class="nav-item"><a class="nav-link"
+                                    href="practices.html">Практики</a></li>
+            <li class="nav-item"><a class="nav-link"
+                                    href="goods.html">Товары</a></li>
+            <li class="nav-item"><a class="nav-link"
+                                    href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+<div class="content">
     <section class="products">
         <h2 class="section-title">Товары</h2>
 
         <div class="product-container">
             <article class="product-card"></article>
             <header class="product-header">
-                <img src="../images/item1.png" alt="Собсна" class="product-image">
+                <img src="../images/goods1.png" alt="Собсна" class="product-image">
                 <h3 class="product-title">Электрогитара IBANEZ M80M-WK</h3>
                 <div class="price">203 000 ₽</div>
             </header>
@@ -31,7 +38,7 @@
         <div class="product-container">
             <article class="product-card"></article>
             <header class="product-header">
-                <img src="../images/item2.png" alt="Собсна" class="product-image">
+                <img src="../images/goods2.png" alt="Собсна" class="product-image">
                 <h3 class="product-title">Электрогитара Ibanez FTM33-WK</h3>
                 <div class="price">273 000 ₽</div>
             </header>
@@ -39,13 +46,14 @@
         <div class="product-container">
             <article class="product-card"></article>
             <header class="product-header">
-                <img src="../images/item3.png" alt="Собсна" class="product-image">
+                <img src="../images/goods3.png" alt="Собсна" class="product-image">
                 <h3 class="product-title">Электрогитара Ibanez M8M</h3>
                 <div class="price">711 000 ₽</div>
             </header>
         </div>
     </section>
 </div>
-<div id="footer">Футер</div>
+    <div class="footer">Футер</div>
+</div>
 </body>
 </html>
