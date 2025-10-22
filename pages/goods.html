@@ -1,58 +1,146 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-header {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            color: #2c3e50;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-top: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+
+            .product-header {
+                padding: 1rem;
+            }
+
+            .product-image {
+                height: 180px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="page-container">
     <div class="header">Хэдер</div>
-    <div class="nav">
+    <nav class="nav">
         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link"
-                                    href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="contacts.html">Контакты</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
-    </div>
-<div class="content">
-    <section class="products">
-        <h2 class="section-title">Товары</h2>
+    </nav>
 
-        <div class="product-container">
-            <article class="product-card"></article>
-            <header class="product-header">
-                <img src="../images/goods1.png" alt="Собсна" class="product-image">
-                <h3 class="product-title">Электрогитара IBANEZ M80M-WK</h3>
-                <div class="price">203 000 ₽</div>
-            </header>
-        </div>
-        <div class="product-container">
-            <article class="product-card"></article>
-            <header class="product-header">
-                <img src="../images/goods2.png" alt="Собсна" class="product-image">
-                <h3 class="product-title">Электрогитара Ibanez FTM33-WK</h3>
-                <div class="price">273 000 ₽</div>
-            </header>
-        </div>
-        <div class="product-container">
-            <article class="product-card"></article>
-            <header class="product-header">
-                <img src="../images/goods3.png" alt="Собсна" class="product-image">
-                <h3 class="product-title">Электрогитара Ibanez M8M</h3>
-                <div class="price">711 000 ₽</div>
-            </header>
-        </div>
-    </section>
-</div>
+    <div class="content">
+        <section class="products">
+            <h2 class="section-title">Товары</h2>
+
+            <div class="products-grid">
+                <article class="product-card">
+                    <header class="product-header">
+                        <img src="../images/goods1.png" alt="Электрогитара IBANEZ M80M-WK" class="product-image">
+                        <h3 class="product-title">Электрогитара IBANEZ M80M-WK</h3>
+                        <div class="price">203 000 ₽</div>
+                    </header>
+                </article>
+
+                <article class="product-card">
+                    <header class="product-header">
+                        <img src="../images/goods2.png" alt="Электрогитара Ibanez FTM33-WK" class="product-image">
+                        <h3 class="product-title">Электрогитара Ibanez FTM33-WK</h3>
+                        <div class="price">273 000 ₽</div>
+                    </header>
+                </article>
+
+                <article class="product-card">
+                    <header class="product-header">
+                        <img src="../images/goods3.png" alt="Электрогитара Ibanez M8M" class="product-image">
+                        <h3 class="product-title">Электрогитара Ibanez M8M</h3>
+                        <div class="price">711 000 ₽</div>
+                    </header>
+                </article>
+            </div>
+        </section>
+    </div>
+
     <div class="footer">Футер</div>
 </div>
 </body>
