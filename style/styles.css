@@ -67,12 +67,13 @@ body {
     transform: translateY(-2px);
 }
 
-.content {
+main.content {
     padding: 40px;
-    max-width: 900px;
+    max-width: 900px;]
     margin: 0 auto;
     grid-area: main;
 }
+
 
 .profile-header {
     text-align: center;
@@ -150,6 +151,12 @@ body {
     box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
 }
 
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .experience-section {
     margin-top: 50px;
 }
@@ -160,6 +167,12 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 300;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .experience-card {
@@ -249,6 +262,16 @@ body {
 .contact-container{
     margin: 50px;
 }
+
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    grid-area: footer;
+}
+
 
 @media (max-width: 768px) {
     .nav-list {
