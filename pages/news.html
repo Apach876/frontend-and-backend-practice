@@ -1,78 +1,90 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Новости</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-<div class="page-container">
-    <div class="header">Хэдер</div>
-    <div class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link"
-                                    href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link"
-                                    href="contacts.html">Контакты</a></li>
+<div class="page">
+    <header class="header">
+        <h1 class="header__title">Хэдер</h1>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="practices.html">Практики</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="goods.html">Товары</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="contacts.html">Контакты</a>
+            </li>
         </ul>
-    </div>
-    <div class="content">
-    <section class="news-section">
-        <h2 class="section-title">Последние новости</h2>
+    </nav>
 
-        <div class="news-container">
-            <article class="news-card">
-                <header class="news-header">
-                    <h3 class="news-title">Новый альбом Deftones</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-09-03" class="news-date">3 сентября 2025</time>
-                        <span class="news-author">Автор: Вова Вист</span>
-                    </div>
-                </header>
-                <div class="news-content">
-                    <p>Новый альбом Degtones</p>
-                    <p>Private music</p>
-                </div>
-            </article>
+    <main class="main">
+        <section class="news">
+            <h2 class="news__title">Последние новости</h2>
 
-            <article class="news-card">
-                <header class="news-header">
-                    <h3 class="news-title">Мама Гоши дала ..... интерьвю</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-09-02" class="news-date">2 сентября 2025</time>
-                        <span class="news-author">Автор: Денис Кобзарь</span>
+            <div class="news__list">
+                <article class="news-item">
+                    <header class="news-item__header">
+                        <h3 class="news-item__title">Новый альбом Deftones</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-09-03" class="news-item__date">3 сентября 2025</time>
+                            <span class="news-item__author">Автор: Вова Вист</span>
+                        </div>
+                    </header>
+                    <div class="news-item__content">
+                        <p>Новый альбом Degtones</p>
+                        <p>Private music</p>
                     </div>
-                </header>
-                <div class="news-content">
-                    <p>Мама Гоши дала</p>
-                    <p>Большое интервью</p>
-                </div>
-            </article>
+                </article>
 
-            <article class="news-card">
-                <header class="news-header">
-                    <h3 class="news-title">Глад Валакас поздравил школьников</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-09-01" class="news-date">1 сентября 2025</time>
-                        <span class="news-author">Автор: Денис Сухач</span>
+                <article class="news-item">
+                    <header class="news-item__header">
+                        <h3 class="news-item__title">Мама Гоши дала ..... интерьвю</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-09-02" class="news-item__date">2 сентября 2025</time>
+                            <span class="news-item__author">Автор: Денис Кобзарь</span>
+                        </div>
+                    </header>
+                    <div class="news-item__content">
+                        <p>Мама Гоши дала</p>
+                        <p>Большое интервью</p>
                     </div>
-                </header>
-                <div class="news-content">
-                    <p>Глада Валакас поздравил школьников с началом учебного года</p>
-                    <p>Даб даб даб зяблы довольны</p>
-                </div>
-            </article>
-        </div>
-    </section>
-</div>
-    <div class="footer">Футер</div>
+                </article>
+
+                <article class="news-item">
+                    <header class="news-item__header">
+                        <h3 class="news-item__title">Глад Валакас поздравил школьников</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-09-01" class="news-item__date">1 сентября 2025</time>
+                            <span class="news-item__author">Автор: Денис Сухач</span>
+                        </div>
+                    </header>
+                    <div class="news-item__content">
+                        <p>Глада Валакас поздравил школьников с началом учебного года</p>
+                        <p>Даб даб даб зяблы довольны</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Мой сайт</p>
+    </footer>
 </div>
 </body>
 </html>
