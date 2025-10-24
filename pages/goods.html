@@ -4,69 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Товары</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
-<body>
-<div class="page">
-    <header class="header">
-        <h1 class="header__title">Хэдер</h1>
+<body class="bg-light">
+<div class="container-fluid p-0">
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="h3 mb-1">Хэдер</h1>
+                </div>
+                <div class="col-auto">
+                    <span class="badge bg-light text-primary">Магазин</span>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item">
-                <a class="nav__link" href="../index.html">Главная</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="news.html">Новости</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="practices.html">Практики</a>
-            </li>
-            <li class="nav__item nav__item--active">
-                <a class="nav__link" href="goods.html">Товары</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="contacts.html">Контакты</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            <i class="bi bi-newspaper me-1"></i>Новости
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">
+                            <i class="bi bi-code-slash me-1"></i>Практики
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="goods.html">
+                            <i class="bi bi-cart me-1"></i>Товары
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-telephone me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main class="main">
-        <section class="products">
-            <h2 class="products__title">Товары</h2>
+    <main class="container my-4">
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h2 class="card-title h4 mb-0">
+                        <i class="bi bi-cart me-2"></i>Товары
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="../images/goods1.png" alt="Электрогитара IBANEZ M80M-WK"
+                                         class="img-fluid" style="max-height: 180px; object-fit: contain;">
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Электрогитара IBANEZ M80M-WK</h5>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-danger mb-0">203 000 ₽</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> В корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="products__grid">
-                <article class="product-card">
-                    <header class="product-card__header">
-                        <img src="../images/goods1.png" alt="Электрогитара IBANEZ M80M-WK" class="product-card__image">
-                        <h3 class="product-card__title">Электрогитара IBANEZ M80M-WK</h3>
-                        <div class="product-card__price">203 000 ₽</div>
-                    </header>
-                </article>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="../images/goods2.png" alt="Электрогитара Ibanez FTM33-WK"
+                                         class="img-fluid" style="max-height: 180px; object-fit: contain;">
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Электрогитара Ibanez FTM33-WK</h5>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-danger mb-0">273 000 ₽</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> В корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <article class="product-card">
-                    <header class="product-card__header">
-                        <img src="../images/goods2.png" alt="Электрогитара Ibanez FTM33-WK" class="product-card__image">
-                        <h3 class="product-card__title">Электрогитара Ibanez FTM33-WK</h3>
-                        <div class="product-card__price">273 000 ₽</div>
-                    </header>
-                </article>
-
-                <article class="product-card">
-                    <header class="product-card__header">
-                        <img src="../images/goods3.png" alt="Электрогитара Ibanez M8M" class="product-card__image">
-                        <h3 class="product-card__title">Электрогитара Ibanez M8M</h3>
-                        <div class="product-card__price">711 000 ₽</div>
-                    </header>
-                </article>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                    <img src="../images/goods3.png" alt="Электрогитара Ibanez M8M"
+                                         class="img-fluid" style="max-height: 180px; object-fit: contain;">
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Электрогитара Ibanez M8M</h5>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-danger mb-0">711 000 ₽</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> В корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p class="footer__text">&copy; 2025 Мой сайт</p>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Мой сайт. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                    <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
