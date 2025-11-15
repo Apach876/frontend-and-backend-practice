@@ -3,67 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'>
-    <meta http-equiv='expires' content='0'>
-    <meta http-equiv='pragma' content='no-cache'>
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css">
-
+    <title>Главная</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-<div class="page-container">
-    <div class="header">Хэдер</div>
+<div class="page">
+    <header class="header">
+        <h1 class="header__title">Хэдер</h1>
+    </header>
+
     <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/goods_v1.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+        <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="practices.html">Практики</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="goods_v1.html">Товары</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="contacts.html">Контакты</a>
+            </li>
         </ul>
     </nav>
 
-    <main class="content">
-        <article class="profile-header">
-            <h1 class="profile-title">Информация об авторе</h1>
-            <img class="profile-photo" src="images/photo.png" alt="Фото автора">
-            <h2 class="profile-name">Гришин Артём</h2>
-            <p class="profile-group">ЭФБО-13-24</p>
-        </article>
-
-        <section class="about-me">
-            <h2>Обо мне</h2>
-            <p>Характер скверный. Не женат</p>
+    <main class="main">
+        <section class="profile">
+            <div class="profile__card">
+                <img class="profile__photo" src="../images/photo.png" alt="Фото автора">
+                <div class="profile__info">
+                    <h2 class="profile__name">Гришин Артём</h2>
+                    <p class="profile__group">ЭФБО-13-24</p>
+                </div>
+            </div>
         </section>
 
-        <section class="skills-container">
-            <div class="skill-tag">Пропускать пары</div>
-            <div class="skill-tag">Слушать музыку на парах</div>
-            <div class="skill-tag">Адский шред на гитаре(хлеб)</div>
-            <div class="skill-tag">Плохо шутить</div>
+        <section class="about">
+            <h2 class="about__title">Обо мне</h2>
+            <div class="about__text">
+                <p>Характер скверный. Не женат</p>
+            </div>
         </section>
 
-        <section class="experience-section">
-            <h2 class="section-title">Мой опыт работы</h2>
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3 class="experience-title">Авторемонтник</h3>
-                    <p class="experience-desc">Авторемонт</p>
+        <section class="skills">
+            <h2 class="skills__title">Навыки</h2>
+            <div class="skills__list">
+                <div class="skill">Пропускать пары</div>
+                <div class="skill">Слушать музыку на парах</div>
+                <div class="skill">Адский шред на гитаре(хлеб)</div>
+                <div class="skill">Плохо шутить</div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2 class="projects__title">Мой опыт работы</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <h3 class="project-card__title">Авторемонтник</h3>
+                    <p class="project-card__desc">Авторемонт</p>
                 </article>
-                <article class="experience-card">
-                    <h3 class="experience-title">Музыкальный</h3>
-                    <p class="experience-desc">ВИА Салтыковский Лесопарк</p>
+                <article class="project-card">
+                    <h3 class="project-card__title">Музыкальный</h3>
+                    <p class="project-card__desc">ВИА Салтыковский Лесопарк</p>
                 </article>
-                <article class="experience-card">
-                    <h3 class="experience-title">ЕщёБолееМузыкальный</h3>
-                    <p class="experience-desc">Писал электронную музыку</p>
+                <article class="project-card">
+                    <h3 class="project-card__title">ЕщёБолееМузыкальный</h3>
+                    <p class="project-card__desc">Писал электронную музыку</p>
                 </article>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">&copy; 2025 Мой сайт</p>
     </footer>
 </div>
 </body>
