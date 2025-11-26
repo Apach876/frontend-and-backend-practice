@@ -105,6 +105,8 @@ body {
     background: var(--dark-color);
     padding: var(--spacing-md) 0;
     grid-area: nav;
+    display: flex;
+    justify-content: center;
 }
 
 .nav__list {
@@ -112,7 +114,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: var(--grid-gap-xl);
 }
 
@@ -687,9 +688,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    .nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
     .nav__list {
-        flex-direction: column;
-        gap: var(--grid-gap-small);
+        flex-wrap: nowrap;
+        padding: 0 var(--spacing-md);
     }
 
     .profile__card {
