@@ -5,14 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--nav-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .news__title {
+            font-size: 2rem;
+            margin: 0 0 30px 0;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .news__list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .news-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item__header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .news-item__title {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            color: var(--text-color);
+            line-height: 1.3;
+        }
+
+        .news-item__meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--nav-text);
+        }
+
+        .news-item__date {
+            font-weight: 600;
+        }
+
+        .news-item__author {
+            font-style: italic;
+        }
+
+        .news-item__content {
+            flex: 1;
+            line-height: 1.7;
+            color: var(--nav-text);
+        }
+
+        .news-item__content p {
+            margin: 0 0 15px 0;
+        }
+
+        .news-item__content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--nav-active);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .news-item__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background: var(--nav-active);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .read-more:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .news__title {
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+            }
+
+            .news-item {
+                padding: 20px;
+            }
+
+            .news-item__title {
+                font-size: 1.2rem;
+            }
+
+            .news-item__meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .news-item__image {
+                height: 180px;
+            }
+
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .news__title {
+                font-size: 1.5rem;
+            }
+
+            .news-item {
+                padding: 15px;
+            }
+
+            .news-item__image {
+                height: 150px;
+            }
+
+            .read-more {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .news__list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-item:nth-child(3) {
+                grid-column: span 2;
+                max-width: 600px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .news__list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
+<button class="theme-toggle" id="themeToggle">Темная тема</button>
+
 <div class="page">
     <header class="header">
-        <h1 class="header__title">Хэдер</h1>
+        <h1 class="header__title">Новости</h1>
     </header>
-
 
     <nav class="nav">
         <ul class="nav__list">
@@ -34,7 +231,6 @@
         </ul>
     </nav>
 
-
     <main class="main">
         <section class="news">
             <h2 class="news__title">Последние новости</h2>
@@ -42,6 +238,8 @@
             <div class="news__list">
                 <article class="news-item">
                     <div class="news-item__header">
+                        <span class="category-tag">Музыка</span>
+                        <span class="category-tag">Альбомы</span>
                         <h3 class="news-item__title">Новый альбом Deftones</h3>
                         <div class="news-item__meta">
                             <span class="news-item__date">3 сентября 2025</span>
@@ -49,27 +247,33 @@
                         </div>
                     </div>
                     <div class="news-item__content">
-                        <p>Новый альбом Degtones</p>
-                        <p>Private music</p>
+                        <p>Легендарная ню-метал группа Deftones анонсировала выход своего девятого студийного альбома, который уже стал самым ожидаемым релизом года в рок-среде.</p>
+                        <p>Private music - под таким рабочим названием проходили сессии записи. Продюсером выступил Терри Дэйт, известный по работе над ранними альбомами группы.</p>
+                        <button class="read-more">Читать далее</button>
                     </div>
                 </article>
 
                 <article class="news-item">
                     <div class="news-item__header">
-                        <h3 class="news-item__title">Мама Гоши дала ..... интерьвю</h3>
+                        <span class="category-tag">Интервью</span>
+                        <span class="category-tag">Персоны</span>
+                        <h3 class="news-item__title">Мама Гоши дала эксклюзивное интервью</h3>
                         <div class="news-item__meta">
                             <span class="news-item__date">2 сентября 2025</span>
                             <span class="news-item__author">Автор: Денис Кобзарь</span>
                         </div>
                     </div>
                     <div class="news-item__content">
-                        <p>Мама Гоши дала</p>
-                        <p>Большое интервью</p>
+                        <p>В эксклюзивном интервью нашему изданию мама известного музыканта Гоши поделилась воспоминаниями о детстве сына и его первых шагах в музыке.</p>
+                        <p>Большое интервью раскрывает неизвестные ранее факты о творческом пути артиста и семейных традициях, повлиявших на его становление.</p>
+                        <button class="read-more">Читать далее</button>
                     </div>
                 </article>
 
                 <article class="news-item">
                     <div class="news-item__header">
+                        <span class="category-tag">Образование</span>
+                        <span class="category-tag">События</span>
                         <h3 class="news-item__title">Глад Валакас поздравил школьников</h3>
                         <div class="news-item__meta">
                             <span class="news-item__date">1 сентября 2025</span>
@@ -77,8 +281,9 @@
                         </div>
                     </div>
                     <div class="news-item__content">
-                        <p>Глада Валакас поздравил школьников с началом учебного года</p>
-                        <p>Даб даб даб зяблы довольны</p>
+                        <p>Глада Валакас, известный общественный деятель и меценат, поздравил школьников с началом нового учебного года на торжественной линейке в центральной школе города.</p>
+                        <p>Даб даб даб зяблы довольны - именно так прокомментировали мероприятие участники события. Были вручены подарки отличившимся ученикам и педагогам.</p>
+                        <button class="read-more">Читать далее</button>
                     </div>
                 </article>
             </div>
@@ -89,8 +294,35 @@
         <p class="footer__text">&copy; 2025 Мой сайт</p>
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateButtonText(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateButtonText(newTheme);
+    });
+
+    function updateButtonText(theme) {
+        themeToggle.textContent = theme === 'light' ? 'Темная тема' : 'Светлая тема';
+    }
+
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function() {
+            const newsItem = this.closest('.news-item');
+            const title = newsItem.querySelector('.news-item__title').textContent;
+            alert(`Полная статья "${title}" в разработке. Скоро будет доступна!`);
+        });
+    });
+</script>
 </body>
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-></script>
 </html>
